@@ -10,6 +10,8 @@ public class SampleLauncher : MonoBehaviourPunCallbacks
 
     public InputField playerNickName;
     public GameObject nickNameImput;
+
+    public string chosenAvatar = "AvatarOne";
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +32,14 @@ public class SampleLauncher : MonoBehaviourPunCallbacks
 
     public void StartTheGame()
     {
-        PhotonNetwork.NickName = playerNickName.text;
+        PhotonNetwork.NickName = playerNickName.text + " | " + chosenAvatar;
         PhotonNetwork.ConnectUsingSettings();
 
         nickNameImput.SetActive(false);
+    }
+
+    public void SetAvatar(string avatarName)
+    {
+        chosenAvatar = avatarName;
     }
 }
