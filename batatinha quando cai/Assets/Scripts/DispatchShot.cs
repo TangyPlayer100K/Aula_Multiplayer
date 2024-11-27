@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DispatchShot : MonoBehaviourPunCallbacks
 {
-
+    public float mana = 100;
     public GameObject bulletSpawnPoint;
     // Start is called before the first frame update
     void Start()
@@ -18,10 +18,15 @@ public class DispatchShot : MonoBehaviourPunCallbacks
     {
         if(photonView.IsMine)
         {
-            if (Input.GetKey(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.Space) && mana > 10)
             {
+                mana -= 10;
                 PhotonNetwork.Instantiate("Bullet", bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
             }
+        }
+        if (photonView.IsMine)
+        {
+            mana += 10 * Time.deltaTime;
         }
     }
 }

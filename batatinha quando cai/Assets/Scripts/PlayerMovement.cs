@@ -30,13 +30,15 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             {
                 transform.Translate(0f, 0f, -speed * Time.deltaTime);
             }
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
-                transform.Translate(0f, -rspeed * Time.deltaTime, 0f);
+                transform.Rotate(0f, -2f, 0f);
+                //transform.Translate(0f, -rspeed * Time.deltaTime, 0f);
             }
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
-                transform.Translate(0f, rspeed * Time.deltaTime, 0f);
+                transform.Rotate(0f, 2f, 0f);
+                //transform.Translate(0f, rspeed * Time.deltaTime, 0f);
             }
         }
     }
