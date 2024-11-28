@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Dano
   - Heal
+  - Melle
+  - MelleWeak
+  - Magic
+  - Bullet
   layers:
   - Default
   - TransparentFX
