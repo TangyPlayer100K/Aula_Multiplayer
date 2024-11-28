@@ -11,6 +11,7 @@ public class SampleLauncher : MonoBehaviourPunCallbacks
     public InputField playerNickName;
     public GameObject nickNameImput;
 
+
     public string chosenAvatar = "AvatarOne";
     // Start is called before the first frame update
     void Start()

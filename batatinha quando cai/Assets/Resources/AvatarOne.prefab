@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 2845185984452428984}
   m_Layer: 0
   m_Name: HealHitbox
-  m_TagString: Untagged
+  m_TagString: Heal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
