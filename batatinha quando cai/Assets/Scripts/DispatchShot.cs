@@ -24,6 +24,10 @@ public class DispatchShot : MonoBehaviourPunCallbacks
                 PhotonNetwork.Instantiate("Bullet", bulletSpawnPoint.transform.position, bulletSpawnPoint.transform.rotation);
             }
         }
+        if (mana > 100)
+        {
+            mana = 100;
+        }
         if (photonView.IsMine)
         {
             mana += 10 * Time.deltaTime;
